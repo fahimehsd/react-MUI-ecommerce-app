@@ -16,7 +16,7 @@ const App = () => {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" />
         </Routes>
       </BrowserRouter>
     </div>
