@@ -17,6 +17,14 @@ export const cartSlice = createSlice({
     },
     removeFromCart: (state, action) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload.id);
+    },
+    increaseCount: (state, action) => {
+      state.cart = state.cart.map((item) => {
+        if (item.id === action.payload.id) {
+          item.count++;
+        }
+        return item;
+      });
     }
   }
 });
